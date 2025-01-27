@@ -1,0 +1,229 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    background-image: url('background.jpg'); /* Set the background image here */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  
+  header.large-header {
+    width: 100%;
+    height: 150px; /* Set the desired height */
+    background-color: #f0f0f0; /* Optional: Background color for header */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space between header and content */
+  }
+  
+  .heart-frame {
+    position: relative;
+    width: 250px; /* Square size */
+    height: 250px; /* Square size */
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners for the frame */
+  }
+  
+  .inner-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners for the image */
+  }
+  
+  h1 {
+    color: #ff4081; /* Pink color */
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Space out the letters */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 64, 129, 0.8); /* Glow effect */
+    margin-top: 20px;
+  }
+  
+  /* Confetti container */
+  .confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+  }
+  
+  /* Fireworks Canvas */
+  #fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  
+  /* Style for large header */
+  header.large-header {
+    width: 100%;
+    height: 150px; /* Height for header */
+    background-color: #f0f0f0; /* Optional background color for header */
+  }
+  
+  /* Main Title ("Will you be my Valentine?" on the index page) */
+  h1 {
+    color: #ff4081; /* Pink color */
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Space out the letters */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 64, 129, 0.8); /* Glow effect */
+    animation: popIn 1s ease-out;
+    margin-top: 20px;
+  }
+  
+  /* Animation for the text to "pop in" */
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Buttons */
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin: 0 10px;
+    padding: 20px 40px;
+    font-size: 2rem;
+    background-color: #ff4081; /* Pink color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e91e63;
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Heart Frame Container */
+  .heart-frame {
+    position: relative;
+    width: 250px; /* Square size */
+    height: 250px; /* Square size */
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners for the frame */
+  }
+  
+  /* Image Inside Heart */
+  .inner-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners for the image */
+  }
+  
+  /* Love Message on the love page */
+  .love-message p {
+    font-size: 4rem;
+    color: #ff4081; /* Vibrant pink */
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 64, 129, 0.8); /* Glow effect */
+    letter-spacing: 5px; /* Make the text more spaced out */
+    text-transform: uppercase;
+    animation: popIn 1s ease-out; /* Pop-in animation */
+    margin-top: 50px;
+  }
+  
+  /* "You're a bum" Text on the no page */
+  .bum-banner p {
+    font-size: 4rem;
+    color: #f44336; /* Red color for emphasis */
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(244, 67, 54, 0.8); /* Red glow effect */
+    letter-spacing: 5px; /* Spacing out the letters */
+    text-transform: uppercase;
+    animation: popIn 1s ease-out; /* Pop-in animation */
+  }
+  
+  /* Centering and Styling the Text */
+  .bum-banner, .love-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styling for the "Try Again" Button */
+  #tryAgainButton {
+    padding: 15px 30px;
+    font-size: 2rem;
+    background-color: #f44336; /* Red color for "Try Again" */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #tryAgainButton:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Confetti container */
+  .confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+  }
+  
+  /* Fireworks Canvas */
+  #fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }

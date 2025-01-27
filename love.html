@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSConfetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.0.8/dist/index.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="heart-frame">
+      <img class="inner-picture" src="image-love.jpg" alt="I Love You" />
+    </div>
+    <h1>I Love You! 💖</h1>
+  </div>
+
+  <!-- Music -->
+  <audio id="happyMusic" src="happy.mp3"></audio>
+
+  <!-- Fireworks and Confetti -->
+  <canvas id="fireworks"></canvas>
+
+  <script src="fireworks.js"></script>
+  <script src="confetti.js"></script>
+
+  <script>
+    // Function to play the happy music and trigger fireworks/confetti
+    function playMusicAndEffects() {
+      // Access the audio element
+      const happyMusic = document.getElementById('happyMusic');
+      
+      // Play the music
+      happyMusic.play();
+
+      // Trigger fireworks
+      const fireworksCanvas = document.getElementById('fireworks');
+      fireworksCanvas.width = window.innerWidth;
+      fireworksCanvas.height = window.innerHeight;
+      const fireworks = new Fireworks(fireworksCanvas);
+      fireworks.start(); // Start fireworks animation
+
+      // Trigger confetti
+      const confetti = new JSConfetti();
+      confetti.addConfetti(); // Trigger confetti animation
+    }
+
+    // Wait for user interaction before playing music
+    document.body.addEventListener('click', playMusicAndEffects);
+  </script>
+</body>
+</html>

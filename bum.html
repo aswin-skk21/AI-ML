@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're a Bum</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSConfetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.0.8/dist/index.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="heart-frame">
+      <img class="inner-picture" src="image-bum.jpg" alt="You're a Bum" />
+    </div>
+    <h1>You're a Bum! 😢</h1>
+  </div>
+
+  <!-- Music -->
+  <audio id="sadMusic" src="sad.mp3"></audio>
+
+  <script>
+    // Function to play the sad music and trigger any other effects
+    function playSadMusicAndEffects() {
+      const sadMusic = document.getElementById('sadMusic');
+      sadMusic.play(); // Play the sad music
+
+    }
+
+    // Wait for user interaction (click) to play the sad music
+    document.body.addEventListener('click', playSadMusicAndEffects);
+  </script>
+</body>
+</html>
